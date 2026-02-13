@@ -1,14 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/tilemap/assets/vite-DcBtz0py.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fantasymap</title>
-    <script type="module" crossorigin src="/tilemap/assets/index-Ca5xci79.js"></script>
-    <link rel="stylesheet" crossorigin href="/tilemap/assets/index-ro63RcYw.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Map Generator</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #2b3a42;
+            font-family: sans-serif;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #ui-layer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .btn {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: background 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            border-color: white;
+        }
+    </style>
+  <script type="module" crossorigin src="/fantasymap/assets/index-BeoJ2Ay4.js"></script>
+  <link rel="stylesheet" crossorigin href="/fantasymap/assets/index-ro63RcYw.css">
+</head>
+<body>
+    <div id="ui-layer">
+        <button id="mode-switch" class="btn">View: Complex</button>
+    </div>
+    <div id="app"></div>
+</body>
 </html>
